@@ -21,9 +21,9 @@ public class AccountController {
         return ResponseEntity.ok(balance);
     }
 
-    @PutMapping("/{userId}/update-balance")
-    public ResponseEntity<String> updateBalance(@PathVariable long userId, @RequestParam long newBalance) {
-        accountService.updateBalance(userId, newBalance);
+    @PutMapping("/{id}/update-balance")
+    public ResponseEntity<String> updateBalance(@PathVariable long id, @RequestParam long newBalance) {
+        accountService.updateBalance(id, newBalance);
         return ResponseEntity.ok("Balance updated successfully");
     }
 }
